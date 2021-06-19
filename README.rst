@@ -37,3 +37,12 @@ Citation
      year = {2021},
      doi = {}
    }
+
+Learn More
+==========
+
+==================  =============================================
+**Repository**      https://github.com/galacticwinds/Catastrophic_Cooling_Superwinds_II_Data
+**GitPage**         https://galacticwinds.github.io/Catastrophic_Cooling_Superwinds_II_Data
+**Archive**         `10.5281/zenodo.4989578 <https://doi.org/10.5281/zenodo.4989578>`_
+==================  =============================================
