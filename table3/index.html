@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<!--
+HTML and Javascript codes written by Ashkbiz Danehkar, University of Michigan, 2020
+https://danehkar.github.io/
+-->
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.slidecontainer {
+  width: 100%;
+}
+
+.datalist {
+  display: none;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 25px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: #4CAF50;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: #4CAF50;
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+
+<h1>Catastrophic Cooling in Superwinds. II. Exploring the Parameter Space</h1>
+
+<h2>Supplementary Material</h2>
+
+<p>
+<b>Table 3.</b> Integrated luminosities on a logarithmic scale (unit in erg/s) from the different ionization models (see Appendix B for machine-readable tables).
+</p>
+
+The <a target="_blank" href="VizieR.tar.gz">compressed (tar.gz) file</a> containing the machine-readable table files for the emission-line data (a portion shown for guidance regarding its form and content in Table 3) is available in the electronic edition of this article. The following machine-readable files for the emission-line data are available:
+<ul>
+<li><b>table_PI_radi.dat</b>: Fully radiation-bounded photoionization models.</li>
+<li><b>table_CPI_radi.dat</b>: Fully radiation-bounded photoionization and hydrodynamic collisional ionization models.</li>
+<li><b>table_PI_pden.dat</b>: Partially density-bounded photoionization models.</li>
+<li><b>table_CPI_pden.dat</b>: Partially density-bounded photoionization and hydrodynamic collisional ionization models.</li>
+<li><b>table_PI_dens.dat</b>: Fully density-bounded photoionization models.</li>
+<li><b>table_CPI_dens.dat</b>: Fully density-bounded photoionization and hydrodynamic collisional ionization models.</li>
+</ul>
+Each file is named as <b>table_case_bound.dat</b> such as <b>table_CPI_radi.dat</b>, where case is for the ionization case (<b>PI</b>: purely photoionization and <b>CPI</b>: photoionization and hydrodynamic collisional ionization), and bound for the optical depth model (<b>radi</b>: fully radiation-bounded, <b>pden</b>: partially density-bounded, and <b>dens</b>: fully density-bounded). 
+
+<br>
+<br>
+Each file contains the following information:
+
+<ul>
+
+<li><b>metal</b>: metallicity <i>&#7824;</i> &equiv; <i>Z</i>/Z<sub>&#8857;</sub> = 1, 0.5, 0.25, and 0.125.</li>
+
+<li><b>dMdt</b>: mass-loss rate <i>&#7744;</i><sub>sc</sub> = 10<sup>&minus;1</sup>, 10<sup>&minus;2</sup>, 10<sup>&minus;3</sup>, and 10<sup>&minus;4</sup> &#215; <i>&#7824;</i><sup>0.72</sup> M<sub>&#8857;</sub> yr<sup>&minus;1</sup>.</li>
+
+<li><b>Vinf</b>: wind terminal speed <i>V</i><sub>&#x221e;</sub> = 250, 500, and 1000 &#215; <i>&#7824;</i><sup>0.13</sup> km s<sup>&minus;1</sup>.</li>
+
+<li><b>Rsc</b>: cluster radius <i>R</i><sub>sc</sub> = 1 pc.</li>
+
+<li><b>age</b>: Cluster current age <i>t</i> = 1 Myr.</li>
+
+<li><b>Mstar</b>: Cluster total stellar mass <i>M</i><sub>&#9733;</sub> = 2.05 &#215; 10<sup>6</sup> M<sub>&#8857;</sub>.</li>
+
+<li><b>Lion</b>: Logarithmic ionizing luminosity log <i>L</i><sub>ion</sub>.</li>
+
+<li><b>Namb</b>: ambient density <i>n</i><sub>amb</sub> = 1, 10, 10<sup>2</sup>, and 10<sup>3</sup> cm<sup>&minus;3</sup>.</li>
+
+<li><b>Tamb</b>: mean ambient temperature <i>T</i><sub>amb</sub> determined by <small>CLOUDY</small>.</li>
+
+<li><b>Rmax</b>: maximum radius <i>R</i><sub>max</sub> (pc) for the surface brightness integration.</li>
+
+<li><b>Raper</b>: aperture radius <i>R</i><sub>aper</sub> (pc) for the total luminosity integration.</li>
+
+<li><b>Rshell</b>: shell radius  <i>R</i><sub>shell</sub> (pc).</li>
+
+<li><b>Rstr</b>: Str&ouml;mgren radius <i>R</i><sub>str</sub> (pc) determined by <small>CLOUDY</small>.</li>
+
+<li><b>Rbin</b>: bubble inner radius <i>R</i><sub>b,in</sub> (pc).</li>
+
+<li><b>Rbout</b>: bubble outer radius <i>R</i><sub>b,out</sub> (pc) or shell inner radius.</li>
+
+<li><b>Tbubble</b>: median temperature <i>T</i><sub>bubble</sub> of the hot bubble (region b in Figure 2).</li>
+
+<li><b>Tadi</b>: median temperature <i>T</i><sub>adi,med</sub> of the expanding wind predicted by the adiabatic solutions (region a in Figure 2).</li>
+
+<li><b>Twind</b>: median temperature <i>T</i><sub>w,med</sub> of the expanding wind predicted by <small>MAIHEM</small> with the radiative solutions (region a in Figure 2).</li>
+
+<li><b>thin</b>: optically thin (1) or thick (0) model.</li>
+
+<li><b>mode</b>: the cooling/heating radiative/adiabatic modes: 
+<ul>
+<li>1 (AW: adiabatic wind), </li>
+<li>2 (AB: adiabatic bubble), </li>
+<li>3 (AP: adiabatic, pressure-confined),</li> 
+<li>4 (CC: catastrophic cooling), </li>
+<li>5 (CB: catastrophic cooling bubble), and </li>
+<li>6 (CP: catastrophic cooling, pressure-confined).</li>
+<!-- <li>10 (NW: no expanding wind), and </li>
+<li>11 (MC: momentum-conserving).</li> -->
+</ul>
+<li><b>H_1_1216</b>, <b>H_1_6563</b>, . . . , <b>Ar_5_7006</b>: integrated luminosities of the emission lines Ly&alpha; &lambda;1216 &#8491;, H&alpha; &lambda;6563 &#8491;, . . . , [Ar <small>V</small>] &lambda;7006 &#8491;, respectively.</li>
+</ul>
+
+</body>
+</html>
+
