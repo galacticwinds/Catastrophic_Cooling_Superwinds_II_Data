@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<!--
+HTML and Javascript codes written by Ashkbiz Danehkar, University of Michigan, 2020
+https://danehkar.github.io/
+-->
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.slidecontainer {
+  width: 100%;
+}
+
+.datalist {
+  display: none;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 25px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: #4CAF50;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: #4CAF50;
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+
+<h1>Catastrophic Cooling in Superwinds. II. Exploring the Parameter Space</h1>
+
+<h2>Supplementary Material</h2>
+
+<p>
+<b>Figure 3.</b> From top to bottom: the temperature and density profiles of the superwinds on a logarithmic scale with the wind terminal speeds of <i>V</i><sub>&#x221e;</sub> [km s<sup>&minus;1</sup>] (blue, red, and orange solid line). The ejected gas has metallicity <i>&#7824;</i> &equiv; <i>Z</i>/Z<sub>&#8857;</sub> and mass-loss rate <i>&#7744;</i><sub>sc</sub> [M<sub>&#8857;</sub> yr<sup>&minus;1</sup>]. The SSC has radius <i>R</i><sub>sc</sub> = 1 pc and age <i>t</i> = 1 Myr. The physical conditions of the ambient medium are <i>n</i><sub>amb</sub> [cm<sup>&minus;3</sup>] and <i>T</i><sub>amb</sub> based on the thermal profile derived by its <small>CLOUDY</small> photoionization model. The different regions separated by dotted lines: (a) freely expanding wind, (b) shocked-wind, (c) shell, and (d) ambient medium. The adiabatic temperature and density profile for each model are shown by dashed lines.
+</p>
+<table>
+  <tr>
+    <th width="20%"></th>
+    <th height="100%"></th>
+  </tr>
+  <tr>
+    <td style="width: 20%; vertical-align:top">
+<div class="slidecontainer">
+
+  <p><span><i>&#7744;</i><sub>sc</sub> [M<sub>&#8857;</sub> yr<sup>&minus;1</sup>] = </span> <span id="value_dotM" style="font-weight:bold;color:black"></span> <span>&#215; <i>&#7824;</i><sup>0.72</sup></span> </p>
+  <input type="range" min="-4" max="-1" value="-3" id="slide_dotM" class="slider" list="tickmarks_dotM">
+
+<form id="mainForm" name="mainForm">
+  <p><span><i>&#7824;</i> &equiv; <i>Z</i>/Z<sub>&#8857;</sub> = </span> <span id="value_Z" style="font-weight:bold;color:black"></span></p>
+    <label><input type="radio" id="radio_Z" name="radio_metallicity" value="1"> 1</label>
+    <label><input type="radio" id="radio_Z" name="radio_metallicity" value="0.5" checked> 1/2</label>
+    <label><input type="radio" id="radio_Z" name="radio_metallicity" value="0.25"> 1/4</label>
+    <label><input type="radio" id="radio_Z" name="radio_metallicity" value="0.125"> 1/8</label>
+</form>
+
+  <p><span><i>n</i><sub>amb</sub> [cm<sup>&minus;3</sup>] = </span> <span id="value_density" style="font-weight:bold;color:black"></span></p>
+  <input type="range" min="0" max="3" value="1" id="slide_density" class="slider" list="tickmarks_density">
+
+
+<form id="mainForm2" name="mainForm2">
+  <p><span>Video Format: </span> <span id="value_V" style="font-weight:bold;color:black"></span></p>
+    <label><input type="radio" id="radio_V_mp4" name="radio_video_type" value="mp4" checked> mp4</label>
+    <label><input type="radio" id="radio_V_webm" name="radio_video_type" value="webm"> webm</label>
+</form>
+
+<datalist id="tickmarks_density">
+  <option value="0" label="0">
+  <option value="1">
+  <option value="2" label="2">
+  <option value="3">
+  <option value="4" label="4">
+</datalist>
+
+<datalist id="tickmarks_dotM">
+  <option value="-4" label="-4">
+  <option value="-3" label="-3">
+  <option value="-2" label="-2">
+  <option value="-1" label="-1">
+</datalist>
+
+<datalist id="tickmarks_time">
+  <option value="0" label="0">
+  <option value="1">
+  <option value="2">
+  <option value="3">
+  <option value="4">
+  <option value="5" label="5">
+  <option value="6">
+  <option value="7">
+  <option value="8">
+  <option value="9">
+  <option value="10" label="10">
+</datalist>
+</td>
+<td style="text-align: center; vertical-align: middle;">
+<video controls autoplay class='center' id="value_Wind1_video">
+  <source id="mp4_src" src="figs/fig2_R1_M01_N1_Z1.mp4" type="video/mp4" alt="Wind Temperature and density">
+  <source id="webm_src" src="figs/fig2_R1_M01_N1_Z1.webm" type="video/webm" alt="Wind Temperature and density">
+  Sorry, your browser doesn't support embedded videos.
+</video><br>
+<a href="figs/fig2_R1_M01_N1_Z1.mp4" download id="value_Wind1_download">Download</a>
+</td>
+  </tr>
+  <tr>
+<td style="vertical-align:top">
+  <p><font size="1"><span>File:</span> <span id="value_Wind1_filename" style="font-weight:bold;color:black"></span></font></p>
+</td>
+  <tr>
+  </tr>
+  <tr>
+    <th width="15%"></th>
+    <th height="90%"></th>
+  </tr>
+<td>
+<!--  <p><font size="1"><span>Ion File:</span> <span id="value_Ion1_filename" style="font-weight:bold;color:black"></span></font></p>-->
+</td>
+  </tr>
+</table>
+
+<br>
+
+</div>
+
+<script>
+//var canPlay = false;
+//var v = document.createElement('video');
+//if(v.canPlayType && v.canPlayType('video/mp4').replace(/no/, '')) {
+//       canPlay = true;
+//}
+var canPlay = (!!document.createElement('video').canPlayType('video/mp4; codecs=avc1.4D401E,mp4a.40.2'));
+if(canPlay) {
+}
+else {
+   alert("Your browser cannot play MP4.");
+}
+
+var slide_density = document.getElementById("slide_density");
+var value_dotM_float = Math.pow(10.,slide_dotM.value);
+var radio_Z = document.getElementById("radio_Z");
+var radio_velocity = document.getElementById("radio_velocity");
+var radio_Temp = document.getElementById("radio_Temp");
+
+var value_density = document.getElementById("value_density");
+var value_dotM = document.getElementById("value_dotM");
+var value_Z = document.getElementById("value_Z");
+var value_V = document.getElementById("value_V");
+
+var value_Wind1_filename=document.getElementById("value_Wind1_filename");
+
+var value_Wind1_video=document.getElementById("value_Wind1_video");
+var value_Wind1_download = document.getElementById("value_Wind1_download");
+
+value_density.innerHTML = Math.pow(10,slide_density.value);
+var value_dotM_float = Math.pow(10.,slide_dotM.value);
+value_dotM_float = Math.round(value_dotM_float * 10000) / 10000;
+value_dotM.innerHTML = value_dotM_float;
+value_Z.innerHTML = radio_Z.value;
+value_Z.innerHTML = document.mainForm.radio_metallicity.value;
+
+value_V.innerHTML = document.mainForm2.radio_video_type.value;
+
+value_dotM_str = value_dotM.innerHTML.toString();
+value_dotM_str2 = value_dotM_str.replace('.','');
+value_dotM_float=="0.001"
+value_dotM_str2="0000607"
+
+value_Z_str=value_Z.innerHTML.toString();
+value_Z_str2 = value_Z_str.replace('.','');
+value_Z_str2="05";
+value_Z_str="0.5";
+R_str="1"
+
+value_Zoom_str=""
+
+value_Temp_str=""
+
+value_fig_name='fig2'
+
+value_filename_str = value_fig_name+"_R"+R_str+"_M"+value_dotM_str2+"_N"+value_density.innerHTML.toString()+"_Z"+value_Z_str2;
+
+//value_Wind1_video_ogg="figs"+value_Zoom_str+value_Temp_str+"/"+value_filename_str+".ogg";
+//if(canPlay) {
+//    value_Wind1_filename.innerHTML = value_filename_str+'.mp4';
+//    value_Wind1_video.src = value_Wind1_video_mp4;
+//}
+//else {
+//    value_Wind1_filename.innerHTML = value_filename_str+'.webm';
+//    value_Wind1_video.src = value_Wind1_video_webm;
+//}
+//value_Wind1_video.setAttribute("src", value_Wind1_video_mp4);
+value_Wind1_video.pause();
+value_Wind1_video_mp4="figs"+value_Zoom_str+value_Temp_str+"/"+value_filename_str+".mp4";
+value_Wind1_video_webm="figs"+value_Zoom_str+value_Temp_str+"/"+value_filename_str+".webm";
+isSupp = value_Wind1_video.canPlayType("video/mp4");
+if (isSupp == "") {
+   value_Wind1_video.src = value_Wind1_video_webm;
+   value_V_str="webm"
+   radio_V_mp4.checked = false
+   radio_V_webm.checked = true
+} else {
+   value_Wind1_video.src = value_Wind1_video_mp4;
+   value_V_str="mp4"
+   radio_V_mp4.checked = true
+   radio_V_webm.checked = false
+}
+document.mainForm2.radio_video_type.value=value_V_str
+value_V.innerHTML=value_V_str;
+//isSupp = value_Wind1_video.canPlayType("video/mp4");
+if (value_V.innerHTML == "mp4") {
+   value_Wind1_video.src = value_Wind1_video_mp4;
+   value_Wind1_filename.innerHTML = value_filename_str+'.mp4';
+   
+} else {
+   value_Wind1_video.src = value_Wind1_video_webm;
+   value_Wind1_filename.innerHTML = value_filename_str+'.webm';
+}
+value_Wind1_video.load();
+value_Wind1_video.play();
+value_Wind1_download.setAttribute('href', value_Wind1_video_mp4);
+
+
+document.mainForm.onclick = function() {
+    value_Z.innerHTML =  document.mainForm.radio_metallicity.value;
+    value_Z_str=value_Z.innerHTML.toString();
+    value_Z_str = value_Z_str.replace('.','');
+    value_Z_str2=value_Z_str
+
+if ((value_Z_str == '1') && (value_dotM_float=="0.1")){
+    value_Z_str2="10";
+    value_dotM_str2="01";
+}
+if ((value_Z_str == '05') && (value_dotM_float=="0.1")) {
+    value_dotM_str2="00607";
+}
+if ((value_Z_str == '025') && (value_dotM_float=="0.1")) {
+    value_dotM_str2="00369";
+}
+if ((value_Z_str == '0125') && (value_dotM_float=="0.1")) {
+    value_dotM_str2="00224";
+}
+if ((value_Z_str == '1') && (value_dotM_float=="0.01")){
+    value_Z_str2="10";
+    value_dotM_str2="001";
+}
+if ((value_Z_str == '05') && (value_dotM_float=="0.01")) {
+    value_dotM_str2="000607";
+}
+if ((value_Z_str == '025') && (value_dotM_float=="0.01")) {
+    value_dotM_str2="000369";
+}
+if ((value_Z_str == '0125') && (value_dotM_float=="0.01")) {
+    value_dotM_str2="000224";
+}
+if ((value_Z_str == '1') && (value_dotM_float=="0.001")) {
+    value_Z_str2="10";
+    value_dotM_str2="0001";
+}
+if ((value_Z_str == '05') && (value_dotM_float=="0.001")) {
+    value_dotM_str2="0000607";
+}
+if ((value_Z_str == '025') && (value_dotM_float=="0.001")) {
+    value_dotM_str2="0000369";
+}
+if ((value_Z_str == '0125') && (value_dotM_float=="0.001")) {
+    value_dotM_str2="0000224";
+}
+if ((value_Z_str == '1') && (value_dotM_float=="0.0001")) {
+    value_Z_str2="10";
+    value_dotM_str2="00001";
+}
+if ((value_Z_str == '05') && (value_dotM_float=="0.0001")) {
+    value_dotM_str2="607e-05";
+}
+if ((value_Z_str == '025') && (value_dotM_float=="0.0001")) {
+    value_dotM_str2="369e-05";
+}
+if ((value_Z_str == '0125') && (value_dotM_float=="0.0001")) {
+    value_dotM_str2="224e-05";
+}
+    value_filename_str = value_fig_name+"_R"+R_str+"_M"+value_dotM_str2+"_N"+value_density.innerHTML.toString()+"_Z"+value_Z_str2;
+
+value_Wind1_video.pause();
+value_Wind1_video_mp4="figs"+value_Zoom_str+value_Temp_str+"/"+value_filename_str+".mp4";
+value_Wind1_video_webm="figs"+value_Zoom_str+value_Temp_str+"/"+value_filename_str+".webm";
+//isSupp = value_Wind1_video.canPlayType("video/mp4");
+if (value_V_str == "mp4") {
+   value_Wind1_video.src = value_Wind1_video_mp4;
+   value_Wind1_filename.innerHTML = value_filename_str+'.mp4';
+   value_Wind1_download.setAttribute('href', value_Wind1_video_mp4);
+} else {
+   value_Wind1_video.src = value_Wind1_video_webm;
+   value_Wind1_filename.innerHTML = value_filename_str+'.webm';
+   value_Wind1_download.setAttribute('href', value_Wind1_video_webm);
+}
+value_Wind1_video.load();
+value_Wind1_video.play();
+}
+
+document.mainForm2.onclick = function() {
+    value_V.innerHTML =  document.mainForm2.radio_video_type.value;
+    value_V_str=value_V.innerHTML.toString();
+value_Wind1_video.pause();
+value_Wind1_video_mp4="figs"+value_Zoom_str+value_Temp_str+"/"+value_filename_str+".mp4";
+value_Wind1_video_webm="figs"+value_Zoom_str+value_Temp_str+"/"+value_filename_str+".webm";
+//isSupp = value_Wind1_video.canPlayType("video/mp4");
+value_V_str=value_V.innerHTML.toString();
+if (value_V_str == "mp4") {
+   value_Wind1_video.src = value_Wind1_video_mp4;
+   value_Wind1_filename.innerHTML = value_filename_str+'.mp4';
+   value_Wind1_download.setAttribute('href', value_Wind1_video_mp4);
+} else {
+   value_Wind1_video.src = value_Wind1_video_webm;
+   value_Wind1_filename.innerHTML = value_filename_str+'.webm';
+   value_Wind1_download.setAttribute('href', value_Wind1_video_webm);
+}
+value_Wind1_video.load();
+value_Wind1_video.play();
+
+}
+
+slide_density.oninput = function() {
+    value_density.innerHTML = Math.pow(10,this.value);
+    if (value_density.innerHTML == 10000) {
+        R_str="1";
+    } else {
+        R_str="1";
+    }
+    value_filename_str = value_fig_name+"_R"+R_str+"_M"+value_dotM_str2+"_N"+value_density.innerHTML.toString()+"_Z"+value_Z_str2;
+
+value_Wind1_video.pause();
+value_Wind1_video_mp4="figs"+value_Zoom_str+value_Temp_str+"/"+value_filename_str+".mp4";
+value_Wind1_video_webm="figs"+value_Zoom_str+value_Temp_str+"/"+value_filename_str+".webm";
+//isSupp = value_Wind1_video.canPlayType("video/mp4");
+if (value_V_str == "mp4") {
+   value_Wind1_video.src = value_Wind1_video_mp4;
+   value_Wind1_filename.innerHTML = value_filename_str+'.mp4';
+   value_Wind1_download.setAttribute('href', value_Wind1_video_mp4);
+} else {
+   value_Wind1_video.src = value_Wind1_video_webm;
+   value_Wind1_filename.innerHTML = value_filename_str+'.webm';
+   value_Wind1_download.setAttribute('href', value_Wind1_video_webm);
+}
+value_Wind1_video.load();
+value_Wind1_video.play();
+
+}
+
+slide_dotM.oninput = function() {
+    value_dotM_float = Math.pow(10.,slide_dotM.value);
+    value_dotM_float = Math.round(value_dotM_float * 10000) / 10000;
+    value_dotM.innerHTML = value_dotM_float;
+    value_dotM_str = value_dotM.innerHTML.toString();
+    value_dotM_str2 = value_dotM_str.replace('.','');
+    value_Z_str=value_Z.innerHTML.toString();
+    value_Z_str = value_Z_str.replace('.','')
+if ((value_Z_str == '1') && (value_dotM_float=="0.1")) {
+    value_Z_str2="10";
+    value_dotM_str2="01";
+}
+if ((value_Z_str == '05') && (value_dotM_float=="0.1")) {
+    value_dotM_str2="00607";
+}
+if ((value_Z_str == '025') && (value_dotM_float=="0.1")) {
+    value_dotM_str2="00369";
+}
+if ((value_Z_str == '0125') && (value_dotM_float=="0.1")) {
+    value_dotM_str2="00224";
+}
+if ((value_Z_str == '1') && (value_dotM_float=="0.01")){
+    value_Z_str="10";
+    value_dotM_str2="001";
+}
+if ((value_Z_str == '05') && (value_dotM_float=="0.01")) {
+    value_dotM_str2="000607";
+}
+if ((value_Z_str == '025') && (value_dotM_float=="0.01")) {
+    value_dotM_str2="000369";
+}
+if ((value_Z_str == '0125') && (value_dotM_float=="0.01")) {
+    value_dotM_str2="000224";
+}
+if ((value_Z_str == '1') && (value_dotM_float=="0.001")) {
+    value_Z_str="10";
+    value_dotM_str2="0001";
+}
+if ((value_Z_str == '05') && (value_dotM_float=="0.001")) {
+    value_dotM_str2="0000607";
+}
+if ((value_Z_str == '025') && (value_dotM_float=="0.001")) {
+    value_dotM_str2="0000369";
+}
+if ((value_Z_str == '0125') && (value_dotM_float=="0.001")) {
+    value_dotM_str2="0000224";
+}
+if ((value_Z_str == '1') && (value_dotM_float=="0.0001")) {
+    value_Z_str2="10";
+    value_dotM_str2="00001";
+}
+if ((value_Z_str == '05') && (value_dotM_float=="0.0001")) {
+    value_dotM_str2="607e-05";
+}
+if ((value_Z_str == '025') && (value_dotM_float=="0.0001")) {
+    value_dotM_str2="369e-05";
+}
+if ((value_Z_str == '0125') && (value_dotM_float=="0.0001")) {
+    value_dotM_str2="224e-05";
+}
+    value_filename_str = value_fig_name+"_R"+R_str+"_M"+value_dotM_str2+"_N"+value_density.innerHTML.toString()+"_Z"+value_Z_str2;
+
+value_Wind1_video.pause();
+value_Wind1_video_mp4="figs"+value_Zoom_str+value_Temp_str+"/"+value_filename_str+".mp4";
+value_Wind1_video_webm="figs"+value_Zoom_str+value_Temp_str+"/"+value_filename_str+".webm";
+//isSupp = value_Wind1_video.canPlayType("video/mp4");
+if (value_V_str == "mp4") {
+   value_Wind1_video.src = value_Wind1_video_mp4;
+   value_Wind1_filename.innerHTML = value_filename_str+'.mp4';
+   value_Wind1_download.setAttribute('href', value_Wind1_video_mp4);
+} else {
+   value_Wind1_video.src = value_Wind1_video_webm;
+   value_Wind1_filename.innerHTML = value_filename_str+'.webm';
+   value_Wind1_download.setAttribute('href', value_Wind1_video_webm);
+}
+value_Wind1_video.load();
+value_Wind1_video.play();
+
+}
+
+</script>
+
+</body>
+</html>
+
