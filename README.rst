@@ -8,7 +8,7 @@ Catastrophic Cooling in Superwinds. II. Exploring the Parameter Space, Supplemen
 Description
 ===========
 
-The compressed files of the interactive figure (64 images) of Figure 2, the interactive animation (64 videos) of Figure 3  and the interactive figure (192 images) of Figure 6 are available in the electronic edition of this article, and are archived on Zenodo. 
+The files of the interactive figure (64 images) of Figure 2, the interactive animation (64 videos) of Figure 3, the interactive figure (192 images) of Figure 6, and the compressed (tar.gz) file of the machine-readable table files (a portion shown for guidance regarding its form and content in Table 3) are archived on Zenodo. 
 
 * **Figure 2**. From top to bottom: the interactive figure of the temperature and density profiles of the superwinds on a logarithmic scale. The different regions separated by dotted lines: (a) freely expanding wind, (b) shocked-wind, (c) shell, and (d) ambient medium. The adiabatic temperature and density profile for each model are shown by dashed lines.
 
