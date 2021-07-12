@@ -2,8 +2,8 @@
 Catastrophic Cooling in Superwinds II. Supplementary Material
 =============================================================
 
-.. image:: https://img.shields.io/badge/DOI-10.5281/zenodo.4989578-blue.svg
-    :target: https://doi.org/10.5281/zenodo.4989578
+.. image:: https://img.shields.io/badge/DOI-10.5281/zenodo.4989577-blue.svg
+    :target: https://doi.org/10.5281/zenodo.4989577
     :alt: Zenodo
 
 Catastrophic Cooling in Superwinds. II. Exploring the Parameter Space, Supplementary Material
@@ -44,5 +44,5 @@ Learn More
 ==================  =============================================
 **Repository**      https://github.com/galacticwinds/Catastrophic_Cooling_Superwinds_II_Data
 **GitPage**         https://galacticwinds.github.io/Catastrophic_Cooling_Superwinds_II_Data
-**Archive**         `10.5281/zenodo.4989578 <https://doi.org/10.5281/zenodo.4989578>`_
+**Archive**         `10.5281/zenodo.4989578 <https://doi.org/10.5281/zenodo.4989577>`_
 ==================  =============================================
