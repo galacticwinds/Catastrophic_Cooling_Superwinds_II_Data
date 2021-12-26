@@ -82,8 +82,8 @@ https://danehkar.github.io/
 
 <form id="mainForm2" name="mainForm2">
   <p><span>Video Format: </span> <span id="value_V" style="font-weight:bold;color:black"></span></p>
-    <label><input type="radio" id="radio_V_mp4" name="radio_video_type" value="mp4" checked> mp4</label>
-    <label><input type="radio" id="radio_V_webm" name="radio_video_type" value="webm"> webm</label>
+    <label><input type="radio" id="radio_V_mp4" name="radio_video_type" value="mp4"> mp4</label>
+    <label><input type="radio" id="radio_V_webm" name="radio_video_type" value="webm" checked> webm</label>
 </form>
 
 <datalist id="tickmarks_density">
@@ -150,12 +150,12 @@ https://danehkar.github.io/
 //if(v.canPlayType && v.canPlayType('video/mp4').replace(/no/, '')) {
 //       canPlay = true;
 //}
-var canPlay = (!!document.createElement('video').canPlayType('video/mp4; codecs=avc1.4D401E,mp4a.40.2'));
-if(canPlay) {
-}
-else {
-   alert("Your browser cannot play MP4.");
-}
+//var canPlay = (!!document.createElement('video').canPlayType('video/mp4; codecs=avc1.4D401E,mp4a.40.2'));
+//if(canPlay) {
+//}
+//else {
+//   alert("Your browser cannot play MP4.");
+//}
 
 var slide_density = document.getElementById("slide_density");
 var value_dotM_float = Math.pow(10.,slide_dotM.value);
@@ -226,6 +226,9 @@ if (isSupp == "") {
    radio_V_mp4.checked = true
    radio_V_webm.checked = false
 }
+value_V_str="webm"
+radio_V_mp4.checked = false
+radio_V_webm.checked = true
 document.mainForm2.radio_video_type.value=value_V_str
 value_V.innerHTML=value_V_str;
 //isSupp = value_Wind1_video.canPlayType("video/mp4");
@@ -237,10 +240,12 @@ if (value_V.innerHTML == "mp4") {
    value_Wind1_video.src = value_Wind1_video_webm;
    value_Wind1_filename.innerHTML = value_filename_str+'.webm';
 }
+value_Wind1_video.src = value_Wind1_video_webm;
+value_Wind1_filename.innerHTML = value_filename_str+'.webm';
 value_Wind1_video.load();
 value_Wind1_video.play();
-value_Wind1_download.setAttribute('href', value_Wind1_video_mp4);
-
+//value_Wind1_download.setAttribute('href', value_Wind1_video_mp4);
+value_Wind1_download.setAttribute('href', value_Wind1_video_webm);
 
 document.mainForm.onclick = function() {
     value_Z.innerHTML =  document.mainForm.radio_metallicity.value;
