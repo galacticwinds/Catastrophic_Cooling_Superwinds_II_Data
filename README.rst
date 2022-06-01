@@ -30,12 +30,12 @@ Citation
    @article{Danehkar2021,
      author = {{Danehkar}, Ashkbiz and {Oey}, M.~S. and {Gray}, William~J.},
      title = {Catastrophic Cooling in Superwinds. II. Exploring the Parameter Space},
-     journal = {ApJ, accepted (arXiv:2106.10854)},
-     volume = {},
-     number = {},
-     pages = {},
+     journal = {ApJ},
+     volume = {921},
+     number = {1},
+     pages = {91},
      year = {2021},
-     doi = {}
+     doi = {10.3847/1538-4357/ac1a76}
    }
 
 Learn More
